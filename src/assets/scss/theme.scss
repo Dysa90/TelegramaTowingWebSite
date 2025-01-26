@@ -7,6 +7,7 @@
 // 2. Include any default variable overrides here
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "telegramas/variables";
 @import "bootstrap/variables";
 
 
@@ -18,7 +19,6 @@
 @import "bootstrap/root";
 
 // 6. Optionally include any other parts as needed
-@import "bootstrap/utilities";
 @import "bootstrap/reboot";
 @import "bootstrap/type";
 
@@ -26,9 +26,65 @@
 @import "bootstrap/grid";
 @import "bootstrap/transitions";
 @import "bootstrap/card";
+@import "bootstrap/buttons";
 @import "bootstrap/helpers";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+
+@import "telegramas/font";
+@import "bootstrap/utilities";
 @import "bootstrap/utilities/api";
-@import "bootstrap/utilities/api"
 // 8. Add additional custom code here
+
+
+$start-color: $dark; // Color inicial
+$end-color: rgba(0, 0, 0, 0); // Color final (negro transparente)
+$gradient-start: 20%; // Punto de inicio del degradado (puedes ajustar el valor)
+
+
+.bg-multiply{
+    background: linear-gradient(to top, $start-color $gradient-start, $end-color 100%);
+    mix-blend-mode: multiply; // Aplica el efecto Multiply
+    position: absolute;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; // Capa inferior
+}
+
+.bg-cover {
+    // background-image: url('path-to-your-image.jpg'); // Reemplaza con la ruta de tu imagen
+    background-size: cover; // Asegura que la imagen cubra todo el contenedor
+    background-position: center; // Centra la imagen dentro del contenedor
+    background-repeat: no-repeat; // Evita que la imagen se repita
+    width: 100%; // Ajusta el ancho según tus necesidades
+    background-position: top;
+    //height: 300px; // Ajusta la altura según tus necesidades
+  }
+
+  .bg-opacity-85{
+    --bs-bg-opacity: 0.85;
+  }
+
+  .hover-outline{
+    &:hover{
+        border:2px solid $dark;
+    }
+  }
+
+  
+  
+
+  @include media-breakpoint-down(sm) {
+    .title{
+      font-size: rfs-fluid-value(.9rem);
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .title{
+
+      font-size: rfs-fluid-value(1.6rem);
+    }
+  }

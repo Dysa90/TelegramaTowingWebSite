@@ -3,10 +3,307 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Business Page</title>
     <link href="./dist/css/theme.min.css" rel="stylesheet">
+    <script src="./dist/assets/js/rellax.min.js"></script>
+    <script>
+      function copyToClipboard() {
+          // Texto a copiar
+          const textToCopy = "https://www.misitio.com";
+
+          // Crear un elemento de texto temporal
+          const tempInput = document.createElement("input");
+          tempInput.value = textToCopy;
+
+          // Agregarlo al DOM, copiar su contenido y luego eliminarlo
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand("copy");
+          document.body.removeChild(tempInput);
+
+          // Confirmación opcional
+          alert("¡Link copied to clipboard!!");
+      }
+    </script>
+
+  
+
+  
+
   </head>
-  <body>
-    <h1>Hello, world!2</h1>
+  <body class="bg-dark position-relative ">   
+    <div class="container-fluid py-4 py-xl-5 z-n1 position-relative bg-cover " 
+      style="background-image: url('./dist/assets/images/15.jpg'); background-position: top;">
+      <div class="position-absolute w-100 bg-primary bottom-0 start-0 " style="height: 3px; margin-bottom: -7px;"></div>
+      <div class="row" >
+        <div class="col-11 col-sm-9 col-md-8 col-xl-6 mx-auto shadow-sm">
+          <div class="card position-relative bg-transparent border-4 overflow-hidden border-white rounded-4 rounded-bottom-0 ">
+            <div class="bg-multiply"></div>
+            <div class="card-body p-2 text-white z-2 position-relative rellax" data-rellax-speed="-1">
+              <div class="container p-0 p-md-3">
+                <div class="row d-flex align-items-stretch g-3 justify-content-between">
+                  <div class="col col-md-6 col-lg-5 col-xl-6 d-flex flex-column">
+                    <img src="./dist/assets/images/svg/logo.svg" width="32">
+                    <h2 class="title mt-auto poppins-black text-uppercase mb-0">
+                      Telegramas Towing
+                    </h2>
+                    <p class="mb-3 poppins-light-italic fs-7">It’s not just about cars; it’s about trust.</p>
+                  </div>
+                  <div class="col-auto col-md-5 col-lg-4 d-flex flex-column ">
+                    <div class="d-flex  align-items-center rounded-2 bg-white bg-opacity-75 lh-1 p-2 text-dark mb-5">
+                      <div class="me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                          <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                          <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                          <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                      </div>
+                      <div class="fs-9">
+                        <span class="text-muted">Working hours</span>
+                        <p class="mb-0 mt-1 poppins-medium">Always available.</p>
+                      </div>
+                    </div>
+                    <div class="rounded-2 border p-1 mb-3">
+                      <a href="https://wa.me/13059752169?text=¡Hola!%20Estoy%20interesado%20en%20su%20servicio" class="text-decoration-none" target="_blank">
+                        <div class="d-flex align-items-center rounded-2 bg-white bg-opacity-75 lh-1 p-2 text-dark mb-2">
+                          <div class="me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                            </svg>
+                          </div>
+                          <div class="fs-9">
+                            <span class="text-muted">Whatsapp</span>
+                            <p class="mb-0 mt-1 poppins-medium">+1 (305) 975-2169</p>
+                          </div>
+                        </div>                        
+                      </a>
+                     
+                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=telegramastowing@gmail.com&su=Consulta&body=Hola,%20tengo%20una%20consulta%20sobre%20su%20servicio." class="text-decoration-none" target="_blank">
+
+                        <div class="d-flex align-items-center rounded-2 bg-white bg-opacity-75 lh-1 p-2 text-dark mb-2">
+                          <div class="me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                              <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                            </svg>
+                          </div>
+                          <div class="fs-9">
+                            <span class="text-muted">Gmail</span>
+                            <p class="mb-0 mt-1 poppins-medium">telegramastowing</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#" onclick="copyToClipboard()" class="text-decoration-none">
+                        
+                        <div class="d-flex align-items-center rounded-2 bg-white bg-opacity-75 lh-1 p-2 text-dark">
+                          <div class="me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                            </svg>
+                          </div>
+                          <div class="fs-9">
+                            <span class="text-muted">Share</span>
+                            <p class="mb-0 mt-1 poppins-medium">Contact information</p>
+                          </div>
+                        </div>
+                      </a>
+  
+  
+  
+                    </div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid z-1 mt-n4 mt-xl-n5">
+      <div class="row">
+        <div class="col-11 col-sm-9 col-md-8 col-xl-6 mx-auto shadow-sm">        
+          
+          <section class="mt-n1 bg-white shadow">
+            <div class="row">
+              <div class="col-9 mx-auto">
+                <div class="pb-4 pt-5">
+                    <h6 class="poppins-black py-3 position-relative">
+                      <img src="./dist/assets/images/svg/eg_1.svg" width="14" class="position-absolute top-0 start-0 translate-middle">
+                      About us.
+                    </h6>
+                    <p class="position-relative pe-2 pe-lg-4">
+                      <img src="./dist/assets/images/svg/eg_2.svg" width="14" class="position-absolute top-50 start-100 translate-middle">
+                      Telegrama Towing es una empresa única, con una
+                      imagen fresca, elegante y llena de personalidad.
+                      En nuestra empresa de asistencia en carretera, nos regimos por valores sólidos que reflejan nuestro compromiso con cada cliente y cada servicio: Confianza, rapidez y profesionalismo. </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="shadow overflow-hidden">
+            <div class="row">
+              <div class="col position-relative overflow-hidden">
+                <div class="bg-multiply z-0"></div>
+                <div class="bg-cover z-n1 " id="scene" style="background-image: url('./dist/assets/images/6.jpg');">
+                  <div class="row pb-5">
+                    <div class="col-11 col-md-9 col-lg-8 mx-auto rellax" data-rellax-speed="-1"> 
+                      <div class="d-flex py-5 flex-column">
+                        <h6 class="poppins-black p-3 position-relative d-inline-block ms-auto text-end">
+                          <img src="./dist/assets/images/svg/eg_3.svg" height="14" class="position-absolute top-0 start-0 translate-middle">
+                          Contact us.
+                        </h6>
+
+                        <div class="border rounded-1 p-2 position-relative">
+                          <img src="./dist/assets/images/svg/eg_2.svg" width="14" class="position-absolute top-100 start-0 translate-middle mt-4">
+                          <div class="row row-cols-2 g-2 justify-content-center">
+                              <div class="col">
+                                <div class="card h-100 bg-white bg-opacity-90">
+                                  <div class="card-body d-flex flex-column">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo-alt mb-3" viewBox="0 0 16 16">
+                                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                    </svg>
+                                    <h6 class="fw-light">Location</h6>
+                                    <p class="fs-7 text-secondary mb-0">17113 Rich Jo Circle. Lutz Fl 33548</p>
+                                  </div>
+                                  <div class="card-footer bg-transparent border-0">
+                                    <a class="fs-8 text-decoration-none fw-medium mt-auto" href="https://maps.app.goo.gl/puijcq8NjqccCCjy7" target="_blank">See on map</a>
+                                  </div>
+                                    
+                                </div>
+                                
+                              </div>
+                              
+                              <div class="col">
+                                <div class="card h-100 bg-white bg-opacity-90">
+                                  <div class="card-body d-flex flex-column">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-clock-history mb-3" viewBox="0 0 16 16">
+                                      <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                                      <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                                      <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                                    </svg>
+                                    <h6 class="fw-light">Working hours</h6>
+                                    <p class="fs-7 text-secondary mb-0">Always available <span class="text-dark text-decoration-underline unde fw-medium fs-8">24/7</span></p>
+                                    
+                                  </div>
+                                  
+                                </div>
+                                
+                              </div>
+                              
+                              <div class="col">
+                                <div class="card h-100 bg-white bg-opacity-90">
+                                  <div class="card-body d-flex flex-column">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-headset mb-3" viewBox="0 0 16 16">
+                                      <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                                    </svg>
+                                    <h6 class="fw-light">Comunication</h6>
+                                    <p class="fs-7 text-secondary mb-0">+1 (305) 975-2169</p>
+                                  </div>
+                                  <div class="card-footer bg-transparent border-0">
+                                    <a class="fs-8 text-decoration-none fw-medium" href="tel:+1305975-2169">Call now</a>
+
+                                  </div>
+                                </div>
+                              </div>                              
+                              
+                              <div class="col">
+                                <div class="card h-100 bg-white bg-opacity-90">
+                                  <div class="card-body d-flex flex-column">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chat-square-text mb-3" viewBox="0 0 16 16">
+                                      <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                      <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                                    </svg>
+                                    <h6 class="fw-light">SMS</h6>
+                                    <p class="fs-7 text-secondary mb-0">+1 (305) 975-2169</p>
+                                  </div>
+                                  <div class="card-footer bg-transparent border-0">
+                                    <a class="fs-8 text-decoration-none fw-medium mt-auto" href="sms:+1305975-2169">Send message.</a>
+                                  </div>
+                                </div>
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-white shadow">
+            <div class="row">
+              <div class="col-9 mx-auto position-relative mb-4">
+                <img src="./dist/assets/images/svg/eg_5.svg" width="30" class="position-absolute top-100 start-100 translate-middle">
+                <div class="pt-5">
+                    <h6 class="poppins-black py-3 position-relative">
+                      <img src="./dist/assets/images/svg/eg_4.svg" width="18" class="position-absolute top-0 start-0 translate-middle">
+                      Talk us.
+                      <span class="d-block fs-8 fw-light text-muted mt-1">We’re social too...</span>
+                    </h6>
+                    <div class="d-flex flex-wrap gap-0 pb-3">
+                      <a class="btn btn-link link-dark" href="https://www.facebook.com/share/1E57KG7tzs/" target="_blank" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                        </svg>
+                      </a>
+                     
+                      <a class="btn btn-link link-dark" href="https://www.instagram.com/telegramastowing?igsh=MTFkaGRyYXU4NHRvbg==" target="_blank" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                      </a>
+                     
+                      <a class="btn btn-link link-dark" href="https://www.tiktok.com/@telegramas.towing?_t=ZT-8tGTwKpZBYk&_r=1" target="_blank" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                          <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                        </svg>
+                      </a>
+                     
+                                       
+                      <a class="btn btn-link link-dark" href="https://wa.me/13059752169?text=¡Hola!%20Estoy%20interesado%20en%20su%20servicio" target="_blank" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                          <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                        </svg>
+                      </a>
+                     
+                      
+                      <!-- <a class="btn btn-link link-dark" href="#" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                        </svg>
+                      </a> -->
+                     
+                      
+                    </div>
+
+                    <div class="mt-3">
+                      <h6 class="mb-0 poppins-regular fs-9">Telegramas Towing</h6>
+                      <p class="mb-0 poppins-light-italic fs-9 text-primary">It’s not just about cars; it’s about trust.</p>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="text-white py-2 mb-0 fs-9 text-opacity-25 text-center">2025</p>
+          </section>
+          
+        </div>
+      </div>
+    </div>
+    <script>
+      var rellax = new Rellax('.rellax');
+    </script>
   </body>
 </html>

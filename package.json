@@ -9,7 +9,8 @@
   "author": "Dysa90",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "rellax": "^1.12.1"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",

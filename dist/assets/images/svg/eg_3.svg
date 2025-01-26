@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 59 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff9800;
+      }
+
+      .cls-2 {
+        fill: #353535;
+      }
+    </style>
+    <symbol id="New_Symbol_10" data-name="New Symbol 10" viewBox="0 0 58.7 25.45">
+      <g>
+        <path class="cls-2" d="M45.99,1c.13,0,.24.05.34.15l11.23,11.23c.19.19.19.5,0,.69l-11.23,11.23c-.1.1-.21.15-.34.15-.19,0-.5-.13-.5-.49V1.49c0-.36.31-.49.5-.49M45.99,0c-.77,0-1.5.6-1.5,1.49v22.46c0,.9.73,1.49,1.5,1.49.37,0,.74-.14,1.04-.44l11.23-11.23c.58-.58.58-1.53,0-2.11L47.03.44C46.73.14,46.35,0,45.99,0"/>
+        <path class="cls-1" d="M22.24,1.49v22.46c0,1.33,1.61,1.99,2.55,1.05l11.23-11.23c.58-.58.58-1.53,0-2.11L24.79.44c-.94-.94-2.55-.27-2.55,1.05"/>
+        <path class="cls-2" d="M0,1.49v22.46c0,1.33,1.61,1.99,2.54,1.05l11.23-11.23c.58-.58.58-1.53,0-2.11L2.54.44C1.61-.5,0,.17,0,1.49"/>
+      </g>
+    </symbol>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <use width="58.7" height="25.45" transform="scale(1.01 1.02)" xlink:href="#New_Symbol_10"/>
+  </g>
+</svg>

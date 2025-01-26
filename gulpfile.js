@@ -14,18 +14,18 @@ import { deleteAsync as del } from 'del';
 // Rutas de los archivos y carpetas
 const paths = {
   bootstrap: {
-    scss: "./node_modules/bootstrap/scss/**/*", // Todos los archivos SCSS de Bootstrap
-    js: "./node_modules/bootstrap/dist/js/**/*", // Archivos JS de Bootstrap
-    dest: "./src/assets/scss" // Carpeta destino en el proyecto
+    scss: "./node_modules/bootstrap/scss/**/*",
+    js: "./node_modules/bootstrap/dist/js/**/*", 
+    dest: "./src/assets/scss"
   },
   
   custom: {
-    scss: "src/assets/scss/theme.scss", // Archivo SCSS personalizado
-    dest: "./dist/css" // Carpeta donde se guardará el theme compilado
+    scss: "src/assets/scss/theme.scss",
+    dest: "./dist/css" 
   },
   compile: {
-    scss: "./assets/bootstrap/scss/bootstrap.scss", // Archivo SCSS principal de Bootstrap
-    dest: "./dist/css" // Carpeta donde se guardará el CSS compilado
+    scss: "./assets/bootstrap/scss/bootstrap.scss",
+    dest: "./dist/css"
   },
   generated:{
     css:"./dist/css",
@@ -33,12 +33,21 @@ const paths = {
   },
   watch:{
     scss:["src/assets/scss/*.scss", "src/assets/scss/**/*.scss"],
-    html:["./*.html"]
+    html:["./*.html"],
+    images:["src/assets/images/**/*.*"]
   },
   pages:{
     site:"./",
     index:"./index.html"
-  }
+  },
+  rellax:{
+    from: ['src/assets/images/**/*.*', 'src/assets/images/*.*'],
+    to: './dist/assets/images',
+  },
+  images: {
+    from: ['./node_modules/rellax/rellax.min.js'],
+    to: './dist/assets/js',
+}
 
 };
 
@@ -50,6 +59,23 @@ gulp.task("move-bootstrap-files", function () {
     .pipe(gulp.dest(`${paths.bootstrap.dest}/bootstrap`));
 
   return Promise.all([moveScss]); // Asegura que ambas tareas se completen
+});
+gulp.task("move-js-files", function () {
+  
+  const moveRellax = gulp
+    .src(paths.rellax.scss)
+    .pipe(gulp.dest(`${paths.bootstrap.dest}/bootstrap`));
+
+  return Promise.all([moveScss]); // Asegura que ambas tareas se completen
+});
+
+gulp.task("move-images", function () {
+  // Mover los archivos SCSS
+  const moveImg = gulp
+    .src(paths.images.from)
+    .pipe(gulp.dest(`${paths.images.to}`));
+
+  return Promise.all([moveImg]); 
 });
 
 // Tarea para compilar el SCSS de Bootstrap (sin personalizar)
@@ -95,7 +121,7 @@ gulp.task('serve',(cb)=>{
 
 gulp.task('watcher',(cb)=>{ 
      watch(paths.watch.scss, series('compile-theme'));    
-     watch(paths.watch.html, browserSync.reload);    
+     watch(paths.watch.html, browserSync.reload({ stream: true }));  
     cb();
 });
 
@@ -110,5 +136,5 @@ gulp.task(
 );
 gulp.task(
   "default",
-  gulp.series("clean","compile-theme", parallel('serve','watcher'))
+  gulp.series("clean","compile-theme","move-images", parallel('serve','watcher'))
 );
