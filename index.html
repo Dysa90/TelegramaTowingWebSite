@@ -25,32 +25,7 @@
           alert("¡Link copied to clipboard!!");
       }
     </script>
-    <script>
-      document.getElementById('shareLocation').addEventListener('click', () => {
-        // Verificar si el navegador soporta la API de Geolocalización
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              // Si se obtiene la ubicación, construir el enlace para WhatsApp
-              const { latitude, longitude } = position.coords;
-              const message = `Estoy aquí: https://www.google.com/maps?q=${latitude},${longitude}`;
-              const whatsappLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
-              window.open(whatsappLink, '_blank');
-            },
-            (error) => {
-              console.warn('No se pudo obtener la ubicación automáticamente:', error.message);
-              // Si no se obtiene la ubicación, redirigir a Google Maps
-              alert('No se pudo obtener tu ubicación automáticamente. Por favor selecciona tu ubicación en Google Maps.');
-              window.open('https://www.google.com/maps', '_blank');
-            }
-          );
-        } else {
-          // Si la API no está soportada, redirigir a Google Maps
-          alert('Tu navegador no soporta la geolocalización. Por favor selecciona tu ubicación manualmente en Google Maps.');
-          window.open('https://www.google.com/maps', '_blank');
-        }
-      });
-    </script>
+    
 
   
 
@@ -121,7 +96,7 @@
                         </div>                        
                       </a>                      
                      
-                      <a href="shareLocation" class="text-decoration-none">
+                      <a id="shareLocation" class="text-decoration-none" style="cursor: pointer;">
                         
                         <div class="d-flex align-items-center rounded-2 bg-white bg-opacity-75 lh-1 p-2 text-dark">
                           <div class="me-2">
@@ -335,6 +310,33 @@
     </div>
     <script>
       var rellax = new Rellax('.rellax');
+    </script>
+    
+    <script>
+      document.getElementById('shareLocation').addEventListener('click', () => {
+        // Verificar si el navegador soporta la API de Geolocalización
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              // Si se obtiene la ubicación, construir el enlace para WhatsApp
+              const { latitude, longitude } = position.coords;
+              const message = `Estoy aquí: https://www.google.com/maps?q=${latitude},${longitude}`;
+              const whatsappLink = `https://wa.me/13059752169?text=${encodeURIComponent(message)}`;
+              window.open(whatsappLink, '_blank');
+            },
+            (error) => {
+              console.warn('No se pudo obtener la ubicación automáticamente:', error.message);
+              // Si no se obtiene la ubicación, redirigir a Google Maps
+              alert('No se pudo obtener tu ubicación automáticamente. Por favor selecciona tu ubicación en Google Maps.');
+              window.open('https://www.google.com/maps', '_blank');
+            }
+          );
+        } else {
+          // Si la API no está soportada, redirigir a Google Maps
+          alert('Tu navegador no soporta la geolocalización. Por favor selecciona tu ubicación manualmente en Google Maps.');
+          window.open('https://www.google.com/maps', '_blank');
+        }
+      });
     </script>
   </body>
 </html>
